@@ -1,0 +1,10 @@
+repositories {
+    jcenter()
+}
+
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: 'gcm.jar')
+    compile group: 'com.android.support', name: 'support-v13', version: '21.0.0'
+}

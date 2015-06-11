@@ -58,12 +58,9 @@
 			<service android:name="com.plugin.gcm.GCMIntentService" />
 		</config-file>
 
-		<source-file src="src/android/libs/gcm.jar" target-dir="libs/" />
-		<source-file src="src/android/com/plugin/gcm/CordovaGCMBroadcastReceiver.java" target-dir="src/com/plugin/gcm/" />
-		<source-file src="src/android/com/plugin/gcm/GCMIntentService.java" target-dir="src/com/plugin/gcm/" />
-		<source-file src="src/android/com/plugin/gcm/PushHandlerActivity.java" target-dir="src/com/plugin/gcm/" />
-		<source-file src="src/android/com/plugin/gcm/PushPlugin.java" target-dir="src/com/plugin/gcm/" />
-		<source-file src="src/android/com/plugin/android-support-v13.jar" target-dir="libs/" />
+		<!-- We link Plugin code and all its dependencies as Android project so we could have 
+		separate build definitions for Ant and Gradle -->
+		<framework src="src/android" custom="true" />
 
 	</platform>
 

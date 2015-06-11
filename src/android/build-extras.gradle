@@ -1,0 +1,14 @@
+repositories {
+    jcenter()
+}
+
+apply plugin: 'android-library'
+
+// remove default compile dependency which could include duplicate jars from project libs folder
+configurations.compile.dependencies.clear()
+
+// add required dependences
+dependencies {
+    compile fileTree(dir: 'libs', include: 'gcm.jar')
+    compile group: 'com.android.support', name: 'support-v13', version: '21.0.0'
+}
